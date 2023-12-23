@@ -22,7 +22,7 @@ export default class Component {
   /**
    * @param {HTMLElement} $target
    */
-  set $target($target) {
-    this.#$target = $target;
+  set $target(_template) {
+    this.$target.innerHTML = _template;
   }
 }
