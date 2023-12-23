@@ -49,7 +49,7 @@ export default class Tech extends Component {
           .map((tech) => {
             return `
               <div key=${tech.id}>
-                <img src=${tech.imageURL} alt=${tech.alt} />
+                <img src=${tech.imageURL} alt="${tech.alt}" />
                 <div>
                   <h2>${tech.title}</h2>
                   <p>${tech.desc}</p>
