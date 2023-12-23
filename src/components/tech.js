@@ -12,8 +12,4 @@ export default class Tech extends Component {
         </div>
       </div>`;
   }
-
-  _componentDidMount() {
-    this._$target = this._template();
-  }
 }

@@ -15,7 +15,6 @@ export default class App extends Component {
   }
 
   _componentDidMount() {
-    this._$target = this._template();
     const $app = this._$target.querySelector('[data-component="app"]');
     new TechBlogPage($app);
   }

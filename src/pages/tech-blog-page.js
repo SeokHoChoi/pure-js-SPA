@@ -11,7 +11,6 @@ export default class TechBlogPage extends Component {
   }
 
   _componentDidMount() {
-    this._$target = this._template();
     const $techBlogPage = this._$target.querySelector(
       '[data-component="tech-blog-page"]'
     );
