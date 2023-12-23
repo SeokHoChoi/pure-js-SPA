@@ -20,7 +20,7 @@ export default class Component {
   }
 
   /**
-   * @param {HTMLElement} $target
+   * @param {string} _template - HTML과 JavaScript를 템플릿 리터럴로 감싼 문자열입니다.
    */
   set _$target(_template) {
     this._$target.innerHTML = _template;
