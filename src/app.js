@@ -7,8 +7,8 @@ export default class App extends Component {
   }
 
   _componentDidMount() {
-    this.$target = this._template();
-    const $app = this.$target.querySelector('[data-component="app"]');
+    this._$target = this._template();
+    const $app = this._$target.querySelector('[data-component="app"]');
     console.log($app, 'test');
   }
 }

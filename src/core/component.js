@@ -15,14 +15,14 @@ export default class Component {
 
   _componentDidMount() {}
 
-  get $target() {
+  get _$target() {
     return this.#$target;
   }
 
   /**
    * @param {HTMLElement} $target
    */
-  set $target(_template) {
-    this.$target.innerHTML = _template;
+  set _$target(_template) {
+    this._$target.innerHTML = _template;
   }
 }
