@@ -1,5 +1,5 @@
 import Component from '../core/component.js';
-import Tech from '../components/tech.js';
+import TechDetailPage from './tech-detail-page.js';
 
 export default class TechBlogPage extends Component {
   _template() {
@@ -14,6 +14,6 @@ export default class TechBlogPage extends Component {
     const $techBlogPage = this._$target.querySelector(
       '[data-component="tech-blog-page"]'
     );
-    new Tech($techBlogPage);
+    new TechDetailPage($techBlogPage);
   }
 }
