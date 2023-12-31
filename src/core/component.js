@@ -6,6 +6,9 @@ export default class Component {
 
   constructor($target) {
     this.#$target = $target;
+    this._$state;
+
+    this._setupInitialState();
     this._render();
   }
 
@@ -45,4 +48,9 @@ export default class Component {
     this._$target = this._template();
     this._componentDidUpdate();
   }
+
+  /**
+   * 컴포넌트 에서의 초기 state 설정입니다.
+   */
+  _setupInitialState() {}
 }
