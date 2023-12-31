@@ -13,7 +13,7 @@ export default class App extends Component {
       `;
   }
 
-  _componentDidMount() {
+  _componentDidUpdate() {
     const $header = this._$target.querySelector('[data-component="header"]');
     const $app = this._$target.querySelector('[data-component="app"]');
     new Header($header);
