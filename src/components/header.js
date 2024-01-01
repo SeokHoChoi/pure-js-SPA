@@ -5,12 +5,11 @@ export default class Header extends Component {
     return `
       <div>
         <h1>
-          <a data-navigation href="/">tech blog</a>
+          <a href="#/">tech blog</a>
         </h1>
         <nav>
-          <a data-navigation href="/design">디자인</a>
-          <a data-navigation href="/tech">개발</a>
-          <a data-navigation href="/career/jobs">채용 바로가기</a>
+          <a href="#/design">디자인</a>
+          <a href="#/tech">개발</a>
         </nav>
       </div>
     `;
