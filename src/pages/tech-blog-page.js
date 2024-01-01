@@ -1,14 +1,13 @@
+import { getMockData } from '../api/getMockData.js';
 import Component from '../core/component.js';
 
 export default class TechBlogPage extends Component {
   _setupInitialState() {
-    fetch('src/data/mockDataOfTech.json')
-      .then((response) => response.json())
-      .then((data) => {
-        this._$state = data;
-        // 상태 변경을 반영하기 위해 실행
-        this._render();
-      });
+    getMockData().then((data) => {
+      this._$state = data;
+      // 상태 변경을 반영하기 위해 실행
+      this._render();
+    });
   }
 
   _template() {
