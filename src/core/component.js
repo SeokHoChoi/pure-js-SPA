@@ -45,6 +45,8 @@ export default class Component {
    * _componentDidUpdate 메서드 에서의 this._$target = this._template() 실행 코드의 중복을 제거해 줍니다.
    */
   _render() {
+    console.log(this._$target, '음..');
+
     this._$target = this._template();
     this._componentDidUpdate();
   }

@@ -1,5 +1,6 @@
-import { get } from '../api/getMockData.js';
+import { get } from '../api/mockApi.js';
 import Component from '../core/component.js';
+import TechDetailPage from './tech-detail-page.js';
 
 export default class TechBlogPage extends Component {
   _setupInitialState() {
@@ -14,11 +15,11 @@ export default class TechBlogPage extends Component {
     const { techs } = this._$state;
 
     return `
-      <div >
+      <div data-component="tech-blog-page">
         ${techs
           .map((tech) => {
             return `
-              <div key=${tech.id}>
+              <a data-navigation href="/tech/${tech.id}" key=${tech.id}>
                 <img src=${tech.imageURL} alt="${tech.alt}" />
                 <div>
                   <h2>${tech.title}</h2>
@@ -28,7 +29,7 @@ export default class TechBlogPage extends Component {
               '. '
             )}</time>
                 </div>
-              </div>`;
+              </a>`;
           })
           .join('')}
       </div>
