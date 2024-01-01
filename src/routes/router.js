@@ -35,7 +35,7 @@ export default class Router extends Component {
 
     if (!currentRoute) {
       // 라우트가 없는 경우 기본 라우트로 이동
-      window.location.href = './#';
+      window.location.href = '/#';
       this._$state.routes[0].component();
       return;
     }
