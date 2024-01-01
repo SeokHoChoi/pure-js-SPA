@@ -5,9 +5,7 @@ import TechDetailPage from './tech-detail-page.js';
 export default class TechBlogPage extends Component {
   _setupInitialState() {
     get('src/data/mockDataOfTech.json').then((data) => {
-      this._$state = data;
-      // 상태 변경을 반영하기 위해 실행
-      this._render();
+      this._setState(data);
     });
   }
 

@@ -6,9 +6,7 @@ export default class TechDetailPage extends Component {
     const id = 1;
     // 웹 브라우저의 현재 위치를 기준으로 리소스를 찾기에 상대 경로를 입력하면 안됩니다.
     get(`src/data/mockDataDetail${id}.json`).then((data) => {
-      this._$state = data;
-      // 상태 변경을 반영하기 위해 실행
-      this._render();
+      this._setState(data);
     });
   }
 
