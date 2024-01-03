@@ -21,9 +21,10 @@ export default class App extends Component {
     const pages = createPages($app);
 
     const router = new Router($app);
-    router.addRoute('#/', pages.home);
-    router.addRoute('#/tech', pages.list);
-    router.addRoute('#/tech/:id', pages.detail);
-    router.start();
+    router
+      .addRoute('/', pages.home)
+      .addRoute('/tech', pages.tech)
+      .addRoute('/tech/:id', pages.detail)
+      .start();
   }
 }

@@ -3,12 +3,12 @@ import TechDetailPage from './tech-detail-page.js';
 
 export default (app) => {
   const home = () => new TechBlogPage(app);
-  const list = () => new TechBlogPage(app);
+  const tech = () => new TechBlogPage(app);
   const detail = () => new TechDetailPage(app);
 
   return {
     home,
-    list,
+    tech,
     detail,
   };
 };
