@@ -16,7 +16,7 @@ export default class TechDetailPage extends Component {
 
     return `
       <div>
-        <img src=${tech.imageURL} alt="${tech.alt}" />
+        <img src=${tech.src} alt="${tech.alt}" />
         <div>
           <h2>${tech.title}</h2>
           <p>${tech.desc}</p>

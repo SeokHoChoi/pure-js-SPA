@@ -4,7 +4,7 @@ import TechDetailPage from './tech-detail-page.js';
 
 export default class TechBlogPage extends Component {
   _setupInitialState() {
-    get('src/data/mockDataOfTech.json').then((data) => {
+    get('/src/data/mockDataOfTech.json').then((data) => {
       this._setState(data);
     });
   }
@@ -18,7 +18,7 @@ export default class TechBlogPage extends Component {
           .map((tech) => {
             return `
               <a data-navigation href="/tech/${tech.id}" key=${tech.id}>
-                <img src=${tech.imageURL} alt="${tech.alt}" />
+                <img src=${tech.src} alt="${tech.alt}" />
                 <div>
                   <h2>${tech.title}</h2>
                   <p>${tech.desc}</p>
