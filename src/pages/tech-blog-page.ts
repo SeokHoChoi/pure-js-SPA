@@ -3,14 +3,14 @@ import Component from '../core/component.js';
 import TechDetailPage from './tech-detail-page.js';
 
 export default class TechBlogPage extends Component<HTMLDivElement> {
-  _setupInitialState() {
+  setupInitialState() {
     get('/src/data/mockDataOfTech.json', {}).then((data) => {
-      this._setState(data);
+      this.setState(data);
     });
   }
 
-  _template() {
-    const { techs } = this._$state || { techs: [] };
+  template() {
+    const { techs } = this.state || { techs: [] };
 
     return ` 
       <div data-component="tech-blog-page">
