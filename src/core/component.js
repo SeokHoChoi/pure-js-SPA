@@ -1,5 +1,7 @@
 /**
  * 구현에 필요한 코어 interface
+ * 
+ * commit test
  */
 export default class Component {
   #$target;
