@@ -3,11 +3,11 @@
  * 
  * commit test
  */
-export default class Component {
-  #$target;
+export default class Component<T extends HTMLElement> {
+  #$target: T;
   _$state: any;
 
-  constructor($target: any) {
+  constructor($target: T) {
     this.#$target = $target;
 
     this._setupInitialState();
@@ -30,14 +30,14 @@ export default class Component {
    */
   _componentDidUpdate() {}
 
-  get _$target() {
+  get _$target(): T {
     return this.#$target;
   }
 
   /**
    * @param {string} _template - HTML과 JavaScript를 템플릿 리터럴로 감싼 문자열입니다.
    */
-  set _$target(_template) {
+  set _$target(_template: string) {
     this._$target.innerHTML = _template;
   }
 

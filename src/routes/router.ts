@@ -1,6 +1,6 @@
 import Component from '../core/component.js';
 
-export default class Router extends Component {
+export default class Router extends Component<HTMLElement> {
   _setupInitialState() {
     this._setState({
       routes: [],

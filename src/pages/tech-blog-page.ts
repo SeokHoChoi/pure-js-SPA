@@ -2,9 +2,9 @@ import { get } from '../api/mockApi.js';
 import Component from '../core/component.js';
 import TechDetailPage from './tech-detail-page.js';
 
-export default class TechBlogPage extends Component {
+export default class TechBlogPage extends Component<HTMLDivElement> {
   _setupInitialState() {
-    get('/src/data/mockDataOfTech.json').then((data) => {
+    get('/src/data/mockDataOfTech.json', {}).then((data) => {
       this._setState(data);
     });
   }
@@ -15,7 +15,7 @@ export default class TechBlogPage extends Component {
     return ` 
       <div data-component="tech-blog-page">
         ${techs
-          .map((tech) => {
+          .map((tech: any) => {
             return `
               <a data-navigation href="/tech/${tech.id}" key=${tech.id}>
                 <img src=${tech.src} alt="${tech.alt}" />

@@ -1,6 +1,6 @@
 import Component from '../core/component.js';
 
-export default class Header extends Component {
+export default class Header extends Component<HTMLHeadElement> {
   _template() {
     return `
       <div>

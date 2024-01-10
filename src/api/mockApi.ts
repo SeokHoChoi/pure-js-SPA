@@ -1,4 +1,4 @@
-const parseResponse = async (response) => {
+const parseResponse = async (response: any) => {
   const { status } = response;
   let data;
   // 클라이언트의 요청은 정상적이나 컨텐츠를 제공하지 않는경우(HTTP Response body가 존재하지 않습니다)
@@ -12,10 +12,10 @@ const parseResponse = async (response) => {
   };
 };
 
-const request = async (params) => {
+const request = async (params: any) => {
   const { method = 'GET', url, headers = {}, body } = params;
 
-  const config = {
+  const config: any = {
     method,
     headers: new window.Headers(headers),
   };
@@ -29,7 +29,7 @@ const request = async (params) => {
   return parseResponse(response);
 };
 
-export const get = async (url, headers) => {
+export const get = async (url:string, headers: any) => {
   const response = await request({
     url,
     headers,
