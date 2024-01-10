@@ -19,8 +19,8 @@ export default class Router extends Component {
    * @param {Function} callback - 해당 라우트에 대한 콜백 함수로, 특정 컴포넌트의 인스턴스를 생성합니다.
    * @returns {Router} - 현재 Router 인스턴스 입니다.
    */
-  addRoute(path, callback) {
-    const params = [];
+  addRoute(path: string, callback: Function) {
+    const params: any[] = [];
 
     const parsedPath = path
       .replace(/:(\w+)/g, (match, paramName) => {
@@ -42,8 +42,8 @@ export default class Router extends Component {
    * 특정 경로로 이동합니다.
    * @param {string} path - 이동할 경로 입니다.
    */
-  navigate(path) {
-    window.history.pushState(null, null, path);
+  navigate(path: any) {
+    window.history.pushState(null, 'null', path);
     // 이동 후 교체할 인스턴스를 생성합니다.
     this.checkRoutes();
   }
@@ -56,7 +56,7 @@ export default class Router extends Component {
   checkRoutes() {
     const { pathname } = window.location;
 
-    const currentRoute = this._$state.routes.find((route) => {
+    const currentRoute = this._$state.routes.find((route: any) => {
       const { testRegExp } = route;
 
       return testRegExp.test(pathname);
@@ -82,7 +82,7 @@ export default class Router extends Component {
     // 초기 라우팅 체크
     this.checkRoutes();
 
-    document.body.addEventListener('click', (e) => {
+    document.body.addEventListener('click', (e: any) => {
       // closest 메소드를 사용하여 가장 가까운 'a[data-navigation]' 상위 요소를 찾을 수 있습니다.
       const closestLink = e.target.closest('a[data-navigation]');
 

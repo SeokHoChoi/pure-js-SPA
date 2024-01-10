@@ -5,10 +5,10 @@
  */
 export default class Component {
   #$target;
+  _$state: any;
 
-  constructor($target) {
+  constructor($target: any) {
     this.#$target = $target;
-    this._$state;
 
     this._setupInitialState();
     this._setEvent();
@@ -67,7 +67,7 @@ export default class Component {
    * @param {*} newState - 기존의 상태를 새로운 상태로 변경할 상태가 들어옵니다.
    * @description 상태를 변경 후 _render() 메서드를 호출하여 브라우저 출력 내용을 state에 종속시킵니다.
    */
-  _setState(newState) {
+  _setState(newState: any) {
     this._$state = { ...this._$state, ...newState };
     this._render();
   }
@@ -77,8 +77,8 @@ export default class Component {
    * @param {*} selector - 어떤 요소를 선택할지에 대한 인자를 받습니다.
    * @param {*} callback - 각 컴포넌트에서 어떤 동작을 수행할지에 대한 콜백 함수를 인자로 받습니다.
    */
-  _addEvent(eventType, selector, callback) {
-    this._$target.addEventListener(eventType, (event) => {
+  _addEvent(eventType: any, selector: any, callback: any) {
+    this._$target.addEventListener(eventType, (event: any) => {
       if (!event.target.closest(selector)) return false;
       callback(event);
     });
