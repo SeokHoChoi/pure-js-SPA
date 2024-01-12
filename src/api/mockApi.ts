@@ -44,7 +44,7 @@ const request = async ({
   return parseResponse(response);
 };
 
-const get = async (
+export const get = async (
   url: string,
   headers: Record<string, string>
 ): Promise<unknown> => {
