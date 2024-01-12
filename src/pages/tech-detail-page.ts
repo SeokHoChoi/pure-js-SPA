@@ -1,18 +1,18 @@
 import { get } from '../api/mockApi.js';
 import Component from '../core/component.js';
 
-export default class TechDetailPage extends Component {
-  _setupInitialState() {
+export default class TechDetailPage extends Component<HTMLDivElement> {
+  setupInitialState() {
     const id = window.location.href.split('/tech/')[1];
 
     // 웹 브라우저의 현재 위치를 기준으로 리소스를 찾기에 상대 경로를 입력하면 안됩니다.
-    get(`/src/data/mockDataDetail${id}.json`).then((data) => {
-      this._setState(data);
+    get(`/src/data/mockDataDetail${id}.json`, {}).then((data) => {
+      this.setState(data);
     });
   }
 
-  _template() {
-    const tech = this._$state;
+  template() {
+    const tech = this.state;
 
     return `
       <div>

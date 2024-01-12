@@ -1,7 +1,7 @@
 import TechBlogPage from './tech-blog-page.js';
 import TechDetailPage from './tech-detail-page.js';
 
-export default (app) => {
+export default (app: any) => {
   const home = () => new TechBlogPage(app);
   const tech = () => new TechBlogPage(app);
   const detail = () => new TechDetailPage(app);

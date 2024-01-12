@@ -1,7 +1,7 @@
 import Component from '../core/component.js';
 
-export default class Header extends Component {
-  _template() {
+export default class Header extends Component<HTMLHeadElement> {
+  template() {
     return `
       <div>
         <h1>
